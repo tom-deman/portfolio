@@ -1,0 +1,23 @@
+html, body
+    font-family: 'Poppins', sans-serif
+    scroll-behavior: smooth
+
+.my-container
+    width: 80%
+    margin: auto
+
+.my-bg
+    background-repeat: no-repeat
+    background-size: cover
+
+.subtitles
+    &::after
+        display: block
+        content: ''
+        width: 45%
+        height: 2px
+        background-color: black
+        position: absolute
+        bottom: -40%
+        left: 50%
+        transform: translateX( -50% )

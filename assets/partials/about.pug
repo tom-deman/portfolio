@@ -1,0 +1,43 @@
+- 
+    const skillsTabs = [
+        {
+            skill: 'Html/Css (Sass)',
+            percentage: 96
+        },
+        {
+            skill: 'Javascript',
+            percentage: 88
+        },
+        {
+            skill: 'React',
+            percentage: 85
+        },
+        {
+            skill: 'Wordpress',
+            percentage: 80
+        },
+        {
+            skill: 'Laravel',
+            percentage: 75
+        },
+    ]
+
+div(
+    id='about'
+    class='h-screen w-full'
+    )
+    div( class='w-full text-center' )
+        h2( class='text-3xl font-medium mt-20 subtitles relative inline-block' ) About Me
+    div( class='flex justify-around pt-40 my-container' )
+        div( class='w-1/3 px-8' )
+            p( class='font-thin text-sm leading-relaxed text-gray-800' ) Welcome to my Portfolio ! I'm a Junior web developer from Brussels, Belgium. I just finished a 6 months intensive full-stack web development formation. I've learned different languages and frameworks : Html / Css, Javascript / DOM, React, Bash, Php, Wordpress and Laravel.
+        div( class='w-1/3 px-8' )
+            p( class='font-thin text-sm leading-relaxed text-gray-800' ) I'm interested in the entire front-end spectrum of web development. I'm a well organised person, independant with high attention to detail. I'm naturally curious, and perpetually working on improving my skills.
+        div( class='w-1/3 px-5' )
+            each skillsTab, index in skillsTabs
+                div( class='shadow w-5/6 bg-gray-200 rounded mb-5' )
+                    div(
+                        class='bg-gray-800 text-xs text-center text-white rounded'
+                        style=`width: ${ skillsTab.percentage }%`
+                    )= skillsTab.skill
+    include ./numbers

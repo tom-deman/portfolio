@@ -1,0 +1,23 @@
+div(
+    id='header'
+    class='w-full h-screen my-bg'
+)
+    include ./navbar
+    div(
+        class='w-48 h-48 m-auto my-bg rounded-full'
+        class='me-img'
+    )
+    div( class='text-center' )
+        h1(
+            class='text-4xl text-white mt-6 font-medium'
+            class='animated fadeInUp slow'
+        ) Thomas Deman
+        p(
+            class='text-white font-thin'
+            class='animated fadeInUp slow'
+        ) Web Developer
+    a( href='#about' )
+        i(
+            class='fas fa-arrow-down text-2xl text-white absolute my-arrow'
+            class='hover:text-gray-400'
+        )
