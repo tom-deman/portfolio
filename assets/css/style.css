@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Heebo', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -44,5 +44,13 @@ html, body {
   bottom: 5%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+#about {
+  height: 90vh;
+}
+
+#services {
+  background-color: #f7f7f7;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+- 
+    const hoursTabs = [
+        {
+            hours: 1160,
+            subject: 'Hours of Code'
+        },
+        {
+            hours: 80,
+            subject: 'Hours of Meetings'
+        },
+        {
+            hours: 25,
+            subject: 'Projects Done'
+        },
+        {
+            hours: 80,
+            subject: 'Hours of Research'
+        }
+    ]
+
+div( class='my-container flex justify-around pt-24' )
+    each hoursTab, index in hoursTabs
+        div(
+            class='text-center'
+            key=index
+        )
+            p( class='text-3xl font-thin' )= hoursTab.hours
+            p( class='font-hairline' )= hoursTab.subject
