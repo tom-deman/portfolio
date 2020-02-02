@@ -49,10 +49,6 @@ button:focus, input:focus, textarea:focus {
           transform: translateX(-50%);
 }
 
-#about {
-  height: 90vh;
-}
-
 #services .services-animation {
   -webkit-transition-property: all;
   transition-property: all;
@@ -81,6 +77,10 @@ button:focus, input:focus, textarea:focus {
 
 #contact .contact-button:hover {
   background-position: left bottom;
+}
+
+#contact .map-height {
+  height: 50vh;
 }
 
 #footer {

@@ -13,16 +13,12 @@ div(
     class='h-20 w-full fixed top-0'
 )
     div( class='my-container justify-between flex h-20 m-auto py-6' )
-        h2( class='ml-8 text-2xl font-medium title text-white' )
-            a(
-                href='#'
-                class='hover:text-gray-400'
-            ) TD
+        h2( class='ml-8 text-2xl title text-white' ) TD
         ul( class='flex justify-around w-2/5' )
             each navLink, index in navLinks
                 li( key=index )
                     a(
                         href=`#${ navLink }`
-                        class='text-sm text-white'
-                        class='hover:text-gray-400'
+                        class='text-xs text-white'
+                        class='hover:text-gray-500'
                     )= navLink.toUpperCase()
