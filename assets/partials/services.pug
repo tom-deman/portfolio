@@ -20,10 +20,10 @@
 
 include ./mixin
 
-div( id='services' )
+section( id='services' )
     +subtitle( 'What I Do' )
-    div( class='my-container' )
-        div( class='flex mt-32 w-full justify-between' )
+    .my-container
+        div( class='flex my-32 w-full justify-between' )
             each servicesTab, index in servicesTabs
                 div(
                     class='w-1/3 border border-gray-300 rounded h-64 mx-6 text-center relative bottom-0'

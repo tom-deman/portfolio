@@ -16,6 +16,11 @@ button:focus, input:focus, textarea:focus {
   outline: none;
 }
 
+a, p, button, i, div {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
 .my-bg {
   background-repeat: no-repeat;
   background-size: cover;

@@ -18,11 +18,12 @@
         }
     ]
 
-div( class='my-container flex justify-around pt-24' )
-    each hoursTab, index in hoursTabs
-        div(
-            class='text-center'
-            key=index
-        )
-            p( class='text-3xl font-thin' )= hoursTab.hours
-            p( class='font-hairline' )= hoursTab.subject
+.my-container
+    div( class='flex justify-around mt-24 mb-32' )
+        each hoursTab, index in hoursTabs
+            div(
+                class='text-center'
+                key = index
+            )
+                p( class='text-3xl font-thin' )= hoursTab.hours
+                p( class='font-hairline' )= hoursTab.subject
