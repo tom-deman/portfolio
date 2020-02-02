@@ -1,3 +1,23 @@
+- 
+    const servicesTabs = [
+        {
+            icon: 'fas fa-pencil-alt',
+            title: 'Web Design',
+            text: 'Building modern web design for your site or web Application'
+        },
+        {
+            icon: 'fas fa-globe',
+            title: 'Web Development',
+            text: 'Coding your site properly with the right technology.'
+        },
+        {
+            icon: 'fas fa-camera',
+            title: 'Photoshoot',
+            text: 'Graduated from High school in Photography, I can take professional pictures for your projects.'
+        }
+    ]
+
+
 include ./mixin
 
 div(
@@ -5,3 +25,17 @@ div(
     class='h-screen'
 )
     +subtitle( 'What I Do' )
+    div( class='my-container' )
+        div( class='flex mt-32 w-full justify-between' )
+            each servicesTab, index in servicesTabs
+                div(
+                    class='w-1/3 border border-gray-400 rounded h-64 mx-6 text-center relative bottom-0'
+                    class='services-animation'
+                    key=index
+                )
+                    i(
+                        class=servicesTab.icon
+                        class='text-3xl mt-10'
+                    )
+                    h3( class='text-xl mt-4' )= servicesTab.title
+                    p( class='font-hairline mt-6 px-10' )= servicesTab.text

@@ -1,0 +1,28 @@
+- 
+    const socialLinks = [
+        {
+            icon: 'fab fa-linkedin-in',
+            url: 'https://www.linkedin.com/in/thomas-deman-168562193/'
+        },
+        {
+            icon: 'fas fa-envelope',
+            url: 'mailto:dt.deman.thomas@gmail.com'
+        },
+        {
+            icon: 'fab fa-instagram',
+            url: 'https://www.instagram.com/molengeek/'
+        }
+    ]
+
+
+div(
+    id='footer'
+    class='bg-black'
+)
+    div( class='flex justify-around pt-24' )
+        p( class='text-gray-500' ) &copy; 2019, Thomas Deman, All Rights Reserved.
+        ul
+            each socialLink, index in socialLinks
+                li
+                    a 
+
