@@ -17,12 +17,26 @@
 
 div(
     id='footer'
-    class='bg-black'
+    class='bg-black relative'
 )
-    div( class='flex justify-around pt-24' )
-        p( class='text-gray-500' ) &copy; 2019, Thomas Deman, All Rights Reserved.
-        ul
-            each socialLink, index in socialLinks
-                li
-                    a 
-
+    div( class='my-container' )
+        div( class='flex w-full justify-between pt-32' )
+            p( class='text-gray-500' ) &copy; 2019, Thomas Deman, All Rights Reserved.
+            ul.flex
+                each socialLink, index in socialLinks
+                    li( key = index )
+                        a(
+                            href = socialLink.url
+                            target='_blank'
+                        )
+                            i(
+                                class = socialLink.icon
+                                class='text-gray-500 text-lg mx-4'
+                                class='hover:text-gray-200'
+                            )
+    a(
+        href='#header'
+        class='to-header'
+        class='absolute'
+    )
+        i( class='fas fa-arrow-up text-gray-500 text-2xl hover:text-gray-200' )

@@ -67,6 +67,11 @@ html, body {
 }
 
 #footer {
-  height: 30vh;
+  height: 34vh;
+}
+
+#footer .to-header {
+  bottom: 15%;
+  right: 4%;
 }
 /*# sourceMappingURL=style.css.map */
