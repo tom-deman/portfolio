@@ -16,26 +16,20 @@ window.addEventListener( 'scroll', () => {
     ? navbar.classList.add( 'bg-black' )
     : navbar.classList.remove( 'bg-black' )
 
-    const one   = ( window.scrollY < 700 )
-    const two   = ( window.scrollY > 700  && window.scrollY < 1450 )
-    const three = ( window.scrollY > 1450 && window.scrollY < 2400 )
-    const four  = ( window.scrollY > 2400 && window.scrollY < 3100 )
-    const five  = ( window.scrollY > 3100 )
-
     switch( true ) {
-        case one:
+        case ( window.scrollY < 700 ):
             linksLoop( 0 )
             break
-        case two:
+        case ( window.scrollY > 700  && window.scrollY < 1450 ):
             linksLoop( 1 )
             break
-        case three:
+        case ( window.scrollY > 1450 && window.scrollY < 2400 ):
             linksLoop( 2 )
             break
-        case four:
+        case ( window.scrollY > 2400 && window.scrollY < 3100 ):
             linksLoop( 3 )
             break
-        case five:
+        case ( window.scrollY > 3100 ):
             linksLoop( 4 )
             break
     }

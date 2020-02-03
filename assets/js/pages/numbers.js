@@ -1,38 +1,43 @@
-window.addEventListener( 'scroll', () => {
+let alreadyDone = false
 
+const numberOne   = document.querySelector( '.number-1' )
+const numberTwo   = document.querySelector( '.number-2' )
+const numberThree = document.querySelector( 'number-3' )
+const numberFour  = document.querySelector( 'number-4' )
+
+window.addEventListener( 'scroll', () => {
     const ready = window.scrollY >= 550
-    let alreadyDone = false
 
     if( ready && !alreadyDone ) {
         alreadyDone = true
 
-        let startNumberOne = 0
-        let endNumberOne = 1060
+        const startNumberOne = 0
+        const endNumberOne = 1060
 
-        let startNumberTwo = 0
-        let endNumberTwo = 60
+        const startNumberTwo = 0
+        const endNumberTwo = 60
 
-        let startNumberThree = 0
-        let endNumberThree = 22
+        const startNumberThree = 0
+        const endNumberThree = 22
 
-        let startNumberFour = 0
-        let endNumberFour = 80
+        const startNumberFour = 0
+        const endNumberFour = 80
 
-        const increment = () =>
+        const incrementOne = () => 
             setTimeout(() => {
                 startNumberOne ++
                 if( startNumberOne <= endNumberOne ) {
-                    document.querySelector( '.number-1' ).innerHTML = startNumberOne
-                    increment()
+                    numberOne.innerHTML = startNumberOne
+                    incrementOne()
                 }
             }, 1)
-        increment()
+        incrementOne()
 
-        const incrementTwo = () => 
+        const incrementTwo = () =>
             setTimeout(() => {
                 startNumberTwo ++
                 if( startNumberTwo <= endNumberTwo ) {
-                    document.querySelector( '.number-2' ).innerHTML = startNumberTwo
+                    numberTwo.innerHTML = startNumberTwo
                     incrementTwo()
                 }
             }, 65)
@@ -42,7 +47,7 @@ window.addEventListener( 'scroll', () => {
             setTimeout(() => {
                 startNumberThree ++
                 if( startNumberThree <= endNumberThree ) {
-                    document.querySelector( '.number-3' ).innerHTML = startNumberThree
+                    numberThree.innerHTML = startNumberThree
                     incrementThree()
                 }
             }, 180)
@@ -52,7 +57,7 @@ window.addEventListener( 'scroll', () => {
             setTimeout(() => {
                 startNumberFour ++
                 if( startNumberFour <= endNumberFour ) {
-                    document.querySelector( '.number-4' ).innerHTML = startNumberFour
+                    numberFour.innerHTML = startNumberFour
                     incrementFour()
                 }
             }, 50)
