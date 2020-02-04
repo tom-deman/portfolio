@@ -13,8 +13,8 @@ window.addEventListener( 'scroll', () => {
     const isTop = window.scrollY > 50
 
     isTop
-    ? navbar.classList.add( 'bg-black' )
-    : navbar.classList.remove( 'bg-black' )
+        ? navbar.classList.add( 'bg-black' )
+        : navbar.classList.remove( 'bg-black' )
 
     switch( true ) {
         case ( window.scrollY < 700 ):
