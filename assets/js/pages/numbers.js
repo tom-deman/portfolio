@@ -1,9 +1,5 @@
 let alreadyDone = false
-
-const numberOne   = document.querySelector( '.number-1' )
-const numberTwo   = document.querySelector( '.number-2' )
-const numberThree = document.querySelector( '.number-3' )
-const numberFour  = document.querySelector( '.number-4' )
+const numbers = document.querySelectorAll( '.number' )
 
 window.addEventListener( 'scroll', () => {
     const ready = window.scrollY >= 550
@@ -20,9 +16,9 @@ window.addEventListener( 'scroll', () => {
                 }
             }, count )
 
-        incrementCount( 0, 1160, numberOne, 2 )
-        incrementCount( 0, 60, numberTwo, 96)
-        incrementCount( 0, 22, numberThree, 260 )
-        incrementCount( 0, 80, numberFour, 70 )
+        incrementCount( 0, 1160, numbers[ 0 ], 2   )
+        incrementCount( 0, 60  , numbers[ 1 ], 96  )
+        incrementCount( 0, 22  , numbers[ 2 ], 260 )
+        incrementCount( 0, 80  , numbers[ 3 ], 70  )
     }
 })
