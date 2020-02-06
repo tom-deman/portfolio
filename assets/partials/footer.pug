@@ -20,8 +20,8 @@ section(
     class='bg-black relative'
 )
     .my-container
-        div( class='flex w-full justify-between pt-32' )
-            p( class='text-gray-400' ) &copy; 2019, Thomas Deman, All Rights Reserved.
+        div( class='flex w-full md:justify-between justify-around pt-32' )
+            p( class='text-gray-400 md:text-base text-xs' ) &copy; 2019, Thomas Deman, All Rights Reserved.
             ul.flex
                 each socialLink, index in socialLinks
                     li( key = index )
@@ -37,6 +37,6 @@ section(
     a(
         href='#home'
         class='to-header'
-        class='absolute'
+        class='absolute md:block hidden'
     )
-        i( class='fas fa-arrow-up text-gray-400 text-2xl hover:text-white' )
+        i( class='fas fa-arrow-up text-gray-400 md:text-2xl text-sm hover:text-white' )
