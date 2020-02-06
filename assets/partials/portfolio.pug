@@ -5,20 +5,59 @@
         'Demos'
     ]
 
+    const imgTabs = [
+        {
+            name: 'Musician',
+            href: 'https://tom-deman.github.io/musician/'
+        },
+        {
+            name: 'Agency',
+            href: 'https://tom-deman.github.io/agency/'
+        },
+        {
+            name: 'Photography',
+            href: 'https://tom-deman.github.io/Thomas_Deman/'
+        },
+        {
+            name: 'Js Pacman',
+            href: 'https://tom-deman.github.io/javascript-pacman/'
+        },
+        {
+            name: 'Music',
+            href: 'https://tom-deman.github.io/music/'
+        },
+        {
+            name: 'Portfolio',
+            href: 'https://tom-deman.github.io/portfolio/'
+        }
+    ]
+
 
 include ./mixin
 
 section(
-    id="portfolio"
-    class="w-full"
+    id='portfolio'
+    class='w-full pb-32'
 )
     +subtitle( 'Portfolio' )
-    div( class="mt-32" x-data="{ count: 0 }" )
-        ul( class="flex w-1/4 m-auto justify-around" )
+    div(
+        class='mt-24'
+        x-data='{ count: 0 }'
+    )
+        ul( class='flex w-1/4 m-auto justify-around h-32' )
             each portfolioTab, index in portfolioTabs
                 li( key = index )
                     button(
-                        class=`font-light hover:text-black text-gray-500 mb-32`
-                        :class=`{ 'text-gray-900 portfolio-links relative inline-block': count === ${ index } }`
+                        class=`font-light hover:text-black text-gray-500`
+                        :class=`{ 'text-gray-900 portfolio-links relative inline-block' : count === ${ index } }`
                         @click=`count = ${ index }`
                     )= portfolioTab
+        div( class='w-full flex flex-wrap' )
+            each imgTab, index in imgTabs
+                div( class='w-1/3 relative' )
+                    a(
+                        href=imgTab.href
+                        target='_blank'
+                    )
+                        include ./images
+                        p( class='absolute text-gray-100 text-lg text-medium opacity-0 pointer-events-none' )= imgTab.name

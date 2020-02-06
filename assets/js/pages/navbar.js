@@ -23,10 +23,10 @@ window.addEventListener( 'scroll', () => {
         case ( window.scrollY > 700  && window.scrollY < 1450 ):
             linksLoop( 1 )
             break
-        case ( window.scrollY > 1450 && window.scrollY < 2400 ):
+        case ( window.scrollY > 1400 && window.scrollY < 2400 ):
             linksLoop( 2 )
             break
-        case ( window.scrollY > 2400 && window.scrollY < 3100 ):
+        case ( window.scrollY > 2250 && window.scrollY < 3100 ):
             linksLoop( 3 )
             break
         case ( window.scrollY > 3100 ):

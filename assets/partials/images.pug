@@ -1,0 +1,15 @@
+img(
+    src=`./assets/img/${ index + 1 }.png`
+    class='px-4 mb-8'
+    class='img-portfolio'
+    :class=`{
+        'hidden':
+            ( count === 1 ) && ( 3 === ${ index } ) ||
+            ( count === 1 ) && ( 4 === ${ index } ) ||
+            ( count === 1 ) && ( 5 === ${ index } ) ||
+            ( count === 2 ) && ( 0 === ${ index } ) ||
+            ( count === 2 ) && ( 1 === ${ index } ) ||
+            ( count === 2 ) && ( 2 === ${ index } ) ||
+            ( count === 2 ) && ( 5 === ${ index } ),
+    }`
+)
