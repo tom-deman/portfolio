@@ -1,5 +1,5 @@
 let alreadyDone = false
-const numbers = document.querySelectorAll( '.number' )
+const numbers   = document.querySelectorAll( '.number' )
 
 window.addEventListener( 'scroll', () => {
     const ready = window.scrollY >= 550
@@ -9,11 +9,10 @@ window.addEventListener( 'scroll', () => {
 
         const incrementCount = (startNumber, endNumber, number, count) => 
             setTimeout(() => {
-                startNumber ++
-                if( startNumber <= endNumber ) {
+                startNumber < endNumber &&
+                    startNumber ++
                     number.innerText = startNumber
                     incrementCount(startNumber, endNumber, number, count)
-                }
             }, count )
 
         incrementCount( 0, 1160, numbers[ 0 ], 2   )
