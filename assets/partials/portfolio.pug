@@ -1,0 +1,24 @@
+- 
+    const portfolioTabs = [
+        'All',
+        'Web',
+        'Demos'
+    ]
+
+
+include ./mixin
+
+section(
+    id="portfolio"
+    class="w-full"
+)
+    +subtitle( 'Portfolio' )
+    div( class="mt-32" x-data="{ count: 0 }" )
+        ul( class="flex w-1/4 m-auto justify-around" )
+            each portfolioTab, index in portfolioTabs
+                li( key = index )
+                    button(
+                        class=`font-light hover:text-black text-gray-500 mb-32`
+                        :class=`{ 'text-gray-900 portfolio-links relative inline-block': count === ${ index } }`
+                        @click=`count = ${ index }`
+                    )= portfolioTab

@@ -87,6 +87,24 @@
         </div>
       </div>
     </section>
+    <section class="w-full" id="portfolio">
+          <div class="w-full text-center">
+            <h2 class="text-3xl mt-20 subtitles relative inline-block">Portfolio</h2>
+          </div>
+      <div class="mt-32" x-data="{ count: 0 }">
+        <ul class="flex w-1/4 m-auto justify-around">
+          <li key="0">
+            <button class="font-light hover:text-black text-gray-500 mb-32" :class="{ 'text-gray-900 portfolio-links relative inline-block': count === 0 }" @click="count = 0">All</button>
+          </li>
+          <li key="1">
+            <button class="font-light hover:text-black text-gray-500 mb-32" :class="{ 'text-gray-900 portfolio-links relative inline-block': count === 1 }" @click="count = 1">Web</button>
+          </li>
+          <li key="2">
+            <button class="font-light hover:text-black text-gray-500 mb-32" :class="{ 'text-gray-900 portfolio-links relative inline-block': count === 2 }" @click="count = 2">Demos</button>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section id="services">
           <div class="w-full text-center">
             <h2 class="text-3xl mt-20 subtitles relative inline-block">What I Do</h2>
