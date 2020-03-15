@@ -19,16 +19,11 @@
             href: 'https://tom-deman.github.io/Thomas_Deman/'
         },
         {
-            name: 'Js Pacman',
-            href: 'https://tom-deman.github.io/javascript-pacman/'
-        },
-        {
-            name: 'Music',
-            href: 'https://tom-deman.github.io/music/'
-        },
-        {
             name: 'E-shop',
             href: 'https://tom-deman.github.io/e-shop/'
+        },
+        {
+            name: 'Coming soon'
         }
     ]
 
@@ -60,4 +55,5 @@ section(
                         target='_blank'
                     )
                         include ./images
-                        p( class='absolute text-gray-100 text-lg text-medium opacity-0 pointer-events-none' )= imgTab.name
+                        if( index != 4 )
+                            p( class='absolute text-gray-100 text-lg text-medium opacity-0 pointer-events-none' )= imgTab.name
