@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -17,8 +17,7 @@ button:focus, input:focus, textarea:focus {
 }
 
 a, p, button, i, div {
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .my-bg {
@@ -28,28 +27,26 @@ a, p, button, i, div {
 
 .subtitles::after {
   display: block;
-  content: '';
+  content: "";
   width: 45%;
   height: 2px;
   background-color: black;
   position: absolute;
   bottom: -40%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .portfolio-links::after {
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background-color: black;
   position: absolute;
   bottom: -40%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 ::-webkit-scrollbar {
@@ -71,73 +68,54 @@ a, p, button, i, div {
 #home {
   background-image: url("../img/header.jpg");
 }
-
 #home .me-img {
   background-image: url("../img/me.jpg");
 }
-
 #home a i {
   left: 50%;
   bottom: 5%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #portfolio {
   background-color: #f7f7f7;
 }
-
 #portfolio img:hover {
-  -webkit-transition: .8s ease;
-  transition: .8s ease;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  transition: 0.8s ease;
+  filter: brightness(50%);
 }
-
 #portfolio img:hover + p {
   opacity: 1;
 }
-
 #portfolio p {
   top: 42%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: .8s ease;
-  transition: .8s ease;
+  transform: translate(-50%, -50%);
+  transition: 0.8s ease;
 }
 
 #services .services-animation {
   height: 38vh;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-
 #services .services-animation:hover {
-  -webkit-box-shadow: 1px 2px 36px 7px rgba(130, 130, 130, 0.23);
-          box-shadow: 1px 2px 36px 7px rgba(130, 130, 130, 0.23);
+  box-shadow: 1px 2px 36px 7px rgba(130, 130, 130, 0.23);
   bottom: 5px;
 }
 
 #contact {
   background-color: #f7f7f7;
 }
-
 #contact .contact-button {
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, black), color-stop(50%, transparent));
+  transition: all 0.5s ease-out;
   background: linear-gradient(to right, black 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
-
 #contact .contact-button:hover {
   background-position: left bottom;
 }
-
 #contact .map-height {
   height: 50vh;
 }
@@ -145,9 +123,9 @@ a, p, button, i, div {
 #footer {
   height: 34vh;
 }
-
 #footer .to-header {
   bottom: 15%;
   right: 4%;
 }
+
 /*# sourceMappingURL=style.css.map */

@@ -7,12 +7,17 @@ window.addEventListener( 'scroll', () => {
     if( ready && !alreadyDone ) {
         alreadyDone = true
 
-        const incrementCount = (startNumber, endNumber, number, count) => 
-            setTimeout(() => {
+        const incrementCount = (
+            startNumber,
+            endNumber,
+            number,
+            count
+        ) =>
+            setTimeout( () => {
                 startNumber < endNumber &&
                     startNumber ++
                     number.innerText = startNumber
-                    incrementCount(startNumber, endNumber, number, count)
+                    incrementCount( startNumber, endNumber, number, count )
             }, count )
 
         incrementCount( 0, 1160, numbers[ 0 ], 2   )

@@ -1,10 +1,10 @@
 const links  = document.querySelectorAll( '.links' )
-const navbar = document.getElementById( 'navbar' )
+const navbar = document.getElementById  ( 'navbar' )
 
-links[0].classList.add( 'text-gray-500' )
+links[ 0 ].classList.add( 'text-gray-500' )
 
-const linksLoop = ( a ) => {
-    for( let i = 0; i < links.length; i ++ ) 
+const linksLoop = ( a ) => {
+    for( let i = 0; i < links.length; i ++ )
         links[ i ].classList.remove( 'text-gray-500' )
     links[ a ].classList.add( 'text-gray-500' )
 }
@@ -13,7 +13,7 @@ window.addEventListener( 'scroll', () => {
     const isTop = window.scrollY > 50
 
     isTop
-        ? navbar.classList.add( 'bg-black' )
+        ? navbar.classList.add   ( 'bg-black' )
         : navbar.classList.remove( 'bg-black' )
 
     switch( true ) {
@@ -32,5 +32,7 @@ window.addEventListener( 'scroll', () => {
         case ( window.scrollY > 3100 ):
             linksLoop( 4 )
             break
+        default:
+            //
     }
 })

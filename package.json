@@ -1,27 +1,31 @@
 {
-  "name"       : "portfolio",
-  "version"    : "1.0.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "description": "",
-  "main"       : "index.js",
-  "scripts"    : {
+  "main": "index.js",
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url" : "git+https://github.com/tom-deman/portfolio.git"
+    "url": "git+https://github.com/tom-deman/portfolio.git"
   },
   "keywords": [],
-  "author"  : "",
-  "license" : "ISC",
-  "bugs"    : {
+  "author": "",
+  "license": "ISC",
+  "bugs": {
     "url": "https://github.com/tom-deman/portfolio/issues"
   },
-  "homepage"    : "https://github.com/tom-deman/portfolio#readme",
+  "homepage": "https://github.com/tom-deman/portfolio#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
-    "alpinejs"                     : "^1.9.8",
-    "animate.css"                  : "^3.7.2",
-    "pug"                          : "^2.0.4",
-    "tailwindcss"                  : "^1.1.4"
+    "alpinejs": "^1.9.8",
+    "animate.css": "^3.7.2",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8"
   }
 }
