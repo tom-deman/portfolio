@@ -4,6 +4,7 @@ const sections = document.querySelectorAll( 'section'      )
 const fill     = document.querySelectorAll( '.fill-height' )
 
 const linksLoop = ( a ) => {
+    console.log( 'working ?' )
     for( let i = 0; i < links.length; i ++ )
         links[ i ].classList.remove( 'text-gray-500' )
     links[ a ].classList.add( 'text-gray-500' )
@@ -22,8 +23,9 @@ const checkScroll = () => {
         const offset = el.offsetTop
         const height = el.offsetHeight
 
-        if( top >= ( offset - 50 ) && top < offset + height )
+        if( top >= ( offset - 50 ) && top < offset + height ) {
             linksLoop( index )
+        }
     } )
 }
 

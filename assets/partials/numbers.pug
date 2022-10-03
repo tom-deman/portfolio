@@ -7,15 +7,9 @@
     ]
 
 .my-container
-    div( class='flex justify-around mt-24 mb-32' )
+    .flex.justify-around.mt-24.mb-32
         each hoursTab, index in hoursTabs
-            div(
-                class='text-center'
-                key = index
-            )
-                p( class = 'h-5 fill-height' )
-                p(
-                    class='md:text-3xl text-xl font-thin'
-                    class='number'
-                )
-                p( class='font-hairline md:text-base text-sm' )= hoursTab
+            .text-center( key = index )
+                p.h-5.fill-height
+                p.text-xl.font-thin.number( class = 'md:text-3xl' )
+                p.font-hairline.text-sm( class = 'md:text-base' )= hoursTab

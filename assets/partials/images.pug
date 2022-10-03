@@ -1,8 +1,6 @@
-img(
-    src=`./assets/img/${ index + 1 }.png`
-    class='px-4 mb-8'
-    class='img-portfolio'
-    :class=`{
+img.px-4.mb-8.img-portfolio(
+    src    = `./assets/img/${ index + 1 }.png`
+    :class = `{
         'hidden':
             ( count === 1 ) && ( 3 === ${ index } ) ||
             ( count === 1 ) && ( 4 === ${ index } ) ||

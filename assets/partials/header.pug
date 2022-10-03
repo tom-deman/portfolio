@@ -1,24 +1,9 @@
-section(
-    id='home'
-    class='w-full h-screen my-bg'
-)
+section#home.w-full.h-screen.my-bg
     include ./navbar
-    div( class='w-full md:pt-48 pt-32' )
-        div(
-            class='md:w-48 md:h-48 h-32 w-32 m-auto my-bg rounded-full'
-            class='me-img'
-        )
-    div( class='text-center' )
-        h1(
-            class='text-4xl tracking-wide text-white mt-6 font-medium'
-            class='animated fadeInUp delay-1s'
-        ) Thomas Deman
-        p(
-            class='text-white font-thin mt-3'
-            class='animated fadeInUp delay-2s'
-        ) Web Developer
-    a( href='#about' )
-        i(
-            class='fas fa-arrow-down text-2xl text-white absolute my-arrow'
-            class='hover:text-gray-400'
-        )
+    .pt-32.w-full( class = 'md:pt-48' )
+        .h-32.w-32.m-auto.my-bg.rounded-full.me-img( class = 'md:w-48 md:h-48' )
+    .text-center
+        h1.text-4xl.tracking-wide.text-white.mt-6.font-medium.animated.fadeInUp.delay-1s Thomas Deman
+        p.text-white.font-thin.mt-3.animated.fadeInUp.delay-2s Web Developer
+    a( href = '#about' )
+        i.fas.fa-arrow-down.text-2xl.text-white.absolute.my-arrow( class = 'hover:text-gray-400' )

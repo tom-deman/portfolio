@@ -7,19 +7,16 @@
     ]
 
 
-div(
-    id='navbar'
-    class='h-20 w-full fixed top-0 z-50 hidden md:block'
-)
+#navbar.h-20.w-full.fixed.top-0.z-50.hidden( class = 'md:block' )
     .my-container
-        div( class='justify-between flex h-20 m-auto py-6' )
-            h2( class='ml-8 text-2xl title text-white' ) TD
-            ul( class='flex justify-around w-2/5' )
+        .justify-between.flex.h-20.m-auto.py-6
+            h2.ml-8.text-2xl.title.text-white TD
+            p.hidden.text-gray-500 ( Just so tailwind can see text-gray-500 )
+            ul.flex.justify-around( class = 'w-2/5' )
                 each navLink, index in navLinks
                     li( key = index )
-                        a(
-                            href=`#${ navLink }`
-                            class='text-xs text-white sm:mx-2 mx-0'
-                            class='hover:text-gray-500'
-                            class='links'
+                        a.mx-0.text-xs.text-white(
+                            href  = `#${ navLink }`
+                            class = 'hover:text-gray-500 sm:mx-2'
+                            class = 'links'
                         )= navLink.toUpperCase()

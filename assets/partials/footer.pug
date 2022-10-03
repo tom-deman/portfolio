@@ -2,39 +2,31 @@
     const socialLinks = [
         {
             icon: 'fab fa-linkedin-in',
-            url: 'https://www.linkedin.com/in/thomas-deman-168562193/'
+            url : 'https://www.linkedin.com/in/thomas-deman-168562193/'
         },
         {
             icon: 'fas fa-envelope',
-            url: 'mailto:dt.deman.thomas@gmail.com'
+            url : 'mailto:dt.deman.thomas@gmail.com'
         }
     ]
 
-    const date = new Date().getFullYear();
+    const date = new Date().getFullYear()
 
 
-section(
-    id='footer'
-    class='bg-black relative'
-)
+section.bg-black.relative#footer
     .my-container
-        div( class='flex w-full md:justify-between justify-around pt-32' )
-            p( class='text-gray-400 md:text-base text-xs' ) &copy; #{ date } - Thomas Deman - All Rights Reserved
+        .flex.w-full.justify-around.pt-32( class='md:justify-between' )
+            p.text-gray-400.text-xs( class = 'md:text-base' ) &copy; #{ date } - Thomas Deman - All Rights Reserved
             ul.flex
                 each socialLink, index in socialLinks
                     li( key = index )
                         a(
-                            href = socialLink.url
-                            target='_blank'
+                            href   = socialLink.url
+                            target = '_blank'
                         )
-                            i(
-                                class = socialLink.icon
-                                class='text-gray-400 text-lg mx-4'
-                                class='hover:text-white'
-                            )
-    a(
-        href='#home'
-        class='to-header'
-        class='absolute md:block hidden'
+                            i.text-gray-400.text-lg.mx-4( class = `hover:text-white ${ socialLink.icon }` )
+    a.absolute.hidden(
+        href  = '#home'
+        class = 'md:block to-header'
     )
-        i( class='fas fa-arrow-up text-gray-400 md:text-2xl text-sm hover:text-white' )
+        i.fas.fa-arrow-up.text-gray-400.text-sm( class='md:text-2xl hover:text-white' )
