@@ -95,7 +95,6 @@ a, p, button, i, div {
 }
 
 #services .services-animation {
-  height: 38vh;
   transition-property: all;
   transition-duration: 0.3s;
 }

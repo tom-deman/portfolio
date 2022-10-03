@@ -1,5 +1,10 @@
 - 
-    const hoursTabs = [ 'Hours of Code', 'Hours of Meetings', 'Projects Done', 'Hours of Research' ]
+    const hoursTabs = [
+        'Hours of Code',
+        'Hours of Meetings',
+        'Projects Done',
+        'Hours of Research'
+    ]
 
 .my-container
     div( class='flex justify-around mt-24 mb-32' )
@@ -8,7 +13,9 @@
                 class='text-center'
                 key = index
             )
+                p( class = 'h-5 fill-height' )
                 p(
                     class='md:text-3xl text-xl font-thin'
-                    class='number' )
+                    class='number'
+                )
                 p( class='font-hairline md:text-base text-sm' )= hoursTab

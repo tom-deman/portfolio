@@ -1,7 +1,7 @@
-const links  = document.querySelectorAll( '.links' )
-const navbar = document.getElementById  ( 'navbar' )
-
-links[ 0 ].classList.add( 'text-gray-500' )
+const links    = document.querySelectorAll( '.links'       )
+const navbar   = document.getElementById  ( 'navbar'       )
+const sections = document.querySelectorAll( 'section'      )
+const fill     = document.querySelectorAll( '.fill-height' )
 
 const linksLoop = ( a ) => {
     for( let i = 0; i < links.length; i ++ )
@@ -9,30 +9,23 @@ const linksLoop = ( a ) => {
     links[ a ].classList.add( 'text-gray-500' )
 }
 
-window.addEventListener( 'scroll', () => {
-    const isTop = window.scrollY > 50
+const checkScroll = () => {
+    if( window.scrollY >= 550 )
+        fill.forEach( el => el.style.display = 'none' )
 
-    isTop
+    window.scrollY > 50
         ? navbar.classList.add   ( 'bg-black' )
         : navbar.classList.remove( 'bg-black' )
 
-    switch( true ) {
-        case ( window.scrollY < 700 ):
-            linksLoop( 0 )
-            break
-        case ( window.scrollY > 700  && window.scrollY < 1450 ):
-            linksLoop( 1 )
-            break
-        case ( window.scrollY > 1400 && window.scrollY < 2400 ):
-            linksLoop( 2 )
-            break
-        case ( window.scrollY > 2250 && window.scrollY < 3100 ):
-            linksLoop( 3 )
-            break
-        case ( window.scrollY > 3100 ):
-            linksLoop( 4 )
-            break
-        default:
-            //
-    }
-})
+    sections.forEach( ( el, index ) => {
+        const top    = window.scrollY
+        const offset = el.offsetTop
+        const height = el.offsetHeight
+
+        if( top >= ( offset - 50 ) && top < offset + height )
+            linksLoop( index )
+    } )
+}
+
+window.addEventListener( 'scroll', () => checkScroll() )
+window.addEventListener( 'load'  , () => checkScroll() )

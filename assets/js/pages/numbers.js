@@ -1,8 +1,8 @@
 let alreadyDone = false
 const numbers   = document.querySelectorAll( '.number' )
 
-window.addEventListener( 'scroll', () => {
-    const ready = window.scrollY >= 550
+const checkToStart = () => {
+    const ready = window.scrollY >= 550 && window.scrollY <= 1250
 
     if( ready && !alreadyDone ) {
         alreadyDone = true
@@ -20,9 +20,12 @@ window.addEventListener( 'scroll', () => {
                     incrementCount( startNumber, endNumber, number, count )
             }, count )
 
-        incrementCount( 0, 1160, numbers[ 0 ], 2   )
-        incrementCount( 0, 60  , numbers[ 1 ], 96  )
-        incrementCount( 0, 22  , numbers[ 2 ], 260 )
-        incrementCount( 0, 80  , numbers[ 3 ], 70  )
+        incrementCount( 0, 2160, numbers[ 0 ], 1   )
+        incrementCount( 0, 120 , numbers[ 1 ], 86  )
+        incrementCount( 0, 44  , numbers[ 2 ], 240 )
+        incrementCount( 0, 160 , numbers[ 3 ], 62  )
     }
-})
+}
+
+window.addEventListener( 'scroll', () => checkToStart() )
+window.addEventListener( 'load'  , () => checkToStart() )
